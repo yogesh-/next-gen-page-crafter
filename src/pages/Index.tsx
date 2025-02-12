@@ -16,7 +16,7 @@ const Index = () => {
       <section className="relative h-[70vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/lovable-uploads/8f1f543c-e947-45a9-99e9-855e54fe7ec6.png"
+            src="/lovable-uploads/downtown-header.webp"
             alt="Palm Jumeirah"
             className="w-full h-full object-cover object-center"
             style={{
@@ -67,7 +67,7 @@ const Index = () => {
               >
                 <div className="relative overflow-hidden rounded-lg">
                   <img
-                    src={`https://source.unsplash.com/random/600x400?dubai,architecture&sig=${index}`}
+                    src={`https://picsum.photos/600/400`}
                     alt={`Developer ${index + 1}`}
                     className="w-full h-64 object-cover transition duration-300 group-hover:scale-110"
                   />
@@ -97,7 +97,7 @@ const Index = () => {
               >
                 <div className="relative overflow-hidden rounded-lg">
                   <img
-                    src={`https://source.unsplash.com/random/400x300?dubai,community&sig=${index}`}
+                    src={`https://picsum.photos/400/300`}
                     alt={`Community ${index + 1}`}
                     className="w-full h-48 object-cover transition duration-300 group-hover:scale-110"
                   />
