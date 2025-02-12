@@ -24,21 +24,30 @@ const Index = () => {
               transform: `scale(1.1) translateY(${scrollY * 0.2}px)`,
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         </div>
-        <div className="relative container mx-auto h-full flex items-center justify-center text-center px-4">
+        <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center px-4 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-8"
           >
-            <h1 className="text-5xl md:text-7xl font-light text-white tracking-wide">
-              PALM JUMEIRAH
+            <h1 className="text-6xl md:text-8xl font-normal text-white tracking-wider leading-tight">
+              PALM <br /> JUMEIRAH
             </h1>
-            <p className="text-white/90 text-lg md:text-xl font-light">
-              Luxury Living Redefined
+            <div className="w-24 h-[1px] bg-white/40 mx-auto"></div>
+            <p className="text-white text-xl md:text-2xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
+              Experience Unparalleled Luxury Living in Dubai's Most Iconic Location
             </p>
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="mt-8 px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 text-lg tracking-wide"
+            >
+              Discover More
+            </motion.button>
           </motion.div>
         </div>
       </section>
