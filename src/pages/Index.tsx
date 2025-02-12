@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -13,8 +12,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative h-[100vh] overflow-hidden">
+      {/* Hero Section - Reduced height */}
+      <section className="relative h-[70vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/lovable-uploads/8f1f543c-e947-45a9-99e9-855e54fe7ec6.png"
@@ -26,12 +25,12 @@ const Index = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         </div>
-        <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center px-4 gap-8">
+        <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6"
           >
             <h1 className="text-6xl md:text-8xl font-normal text-white tracking-wider leading-tight">
               PALM <br /> JUMEIRAH
@@ -44,7 +43,7 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="mt-8 px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 text-lg tracking-wide"
+              className="mt-4 px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 text-lg tracking-wide"
             >
               Discover More
             </motion.button>
@@ -52,9 +51,70 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Top Developers Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-light text-center mb-12">TOP DUBAI DEVELOPERS</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((_, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group cursor-pointer"
+              >
+                <div className="relative overflow-hidden rounded-lg">
+                  <img
+                    src={`https://source.unsplash.com/random/600x400?dubai,architecture&sig=${index}`}
+                    alt={`Developer ${index + 1}`}
+                    className="w-full h-64 object-cover transition duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                    <h3 className="text-white text-xl">Developer {index + 1}</h3>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Communities Section */}
+      <section className="py-16 bg-luxury-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-light text-center mb-12">COMMUNITIES</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((_, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group cursor-pointer"
+              >
+                <div className="relative overflow-hidden rounded-lg">
+                  <img
+                    src={`https://source.unsplash.com/random/400x300?dubai,community&sig=${index}`}
+                    alt={`Community ${index + 1}`}
+                    className="w-full h-48 object-cover transition duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                    <p className="text-white text-sm">Starting from AED 2.5M</p>
+                    <h3 className="text-white text-lg">Community {index + 1}</h3>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
-      <section className="py-20 bg-luxury-50">
-        <div className="container mx-auto">
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
             {[
               { number: "30+", label: "YEARS OF EXPERIENCE" },
@@ -72,42 +132,7 @@ const Index = () => {
                 className="space-y-2"
               >
                 <p className="text-3xl font-light text-luxury-800">{stat.number}</p>
-                <p className="text-xs text-luxury-500 tracking-wider">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Properties */}
-      <section className="py-20">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-light text-center mb-12">
-            NEW PROPERTIES IN DUBAI
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[1, 2, 3, 4].map((_, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group cursor-pointer"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={`https://source.unsplash.com/random/400x300?luxury,apartment&sig=${index}`}
-                    alt="Luxury Property"
-                    className="w-full h-64 object-cover transition duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                    <p className="text-white text-sm">From AED 1.5M</p>
-                    <h3 className="text-white text-lg">Luxury Apartment {index + 1}</h3>
-                  </div>
-                </div>
+                <p className="text-xs text-luxury-500 tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
           </div>
