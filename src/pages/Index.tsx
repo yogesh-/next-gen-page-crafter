@@ -14,16 +14,19 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen">
-        <div className="absolute inset-0 overflow-hidden">
+      <section className="relative h-[100vh] overflow-hidden">
+        <div className="absolute inset-0">
           <img
             src="/lovable-uploads/8f1f543c-e947-45a9-99e9-855e54fe7ec6.png"
             alt="Palm Jumeirah"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
+            style={{
+              transform: `scale(1.1) translateY(${scrollY * 0.2}px)`,
+            }}
           />
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
         </div>
-        <div className="relative container mx-auto h-full flex items-center justify-center text-center">
+        <div className="relative container mx-auto h-full flex items-center justify-center text-center px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
