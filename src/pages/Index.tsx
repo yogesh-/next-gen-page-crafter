@@ -13,6 +13,45 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative h-[100vh] overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/lovable-uploads/8f1f543c-e947-45a9-99e9-855e54fe7ec6.png"
+            alt="Palm Jumeirah"
+            className="w-full h-full object-cover object-center"
+            style={{
+              transform: `scale(1.1) translateY(${scrollY * 0.2}px)`,
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        </div>
+        <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center px-4 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            <h1 className="text-6xl md:text-8xl font-normal text-white tracking-wider leading-tight">
+              PALM <br /> JUMEIRAH
+            </h1>
+            <div className="w-24 h-[1px] bg-white/40 mx-auto"></div>
+            <p className="text-white text-xl md:text-2xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
+              Experience Unparalleled Luxury Living in Dubai's Most Iconic Location
+            </p>
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="mt-8 px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 text-lg tracking-wide"
+            >
+              Discover More
+            </motion.button>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-20 bg-luxury-50">
         <div className="container mx-auto">
