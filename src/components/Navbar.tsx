@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Home, Building2, Phone, Key, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -28,7 +27,7 @@ const Navbar = () => {
             <img
               src="/lovable-uploads/f8b33a1c-192c-48a3-a888-b41b6ff5e286.png"
               alt="Logo"
-              className={`h-6 md:h-8 transition-opacity duration-300 ${
+              className={`h-8 md:h-12 transition-opacity duration-300 ${
                 isScrolled ? "brightness-0" : "brightness-100"
               }`}
             />
@@ -133,7 +132,7 @@ const Navbar = () => {
                 <img
                   src="/lovable-uploads/f8b33a1c-192c-48a3-a888-b41b6ff5e286.png"
                   alt="Logo"
-                  className="h-6 brightness-0"
+                  className="h-8 brightness-0"
                 />
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
