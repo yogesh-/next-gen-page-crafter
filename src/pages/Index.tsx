@@ -16,7 +16,7 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[90vh] overflow-hidden">
+      <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/lovable-uploads/downtown-header.webp"
