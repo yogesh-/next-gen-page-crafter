@@ -1,5 +1,7 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Navbar from "../components/Navbar";
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -12,7 +14,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Reduced height */}
+      <Navbar />
+      
+      {/* Hero Section */}
       <section className="relative h-[70vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
