@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
@@ -152,9 +151,9 @@ const Index = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-luxury-800/50 border border-luxury-700 rounded-sm focus:outline-none focus:border-golden-400 transition"
+                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-sm focus:outline-none focus:border-white/40 transition"
               />
-              <button className="px-6 py-2 bg-golden-500 text-luxury-900 rounded-sm hover:bg-golden-400 transition">
+              <button className="px-6 py-2 bg-white text-luxury-900 rounded-sm hover:bg-white/90 transition">
                 Join
               </button>
             </form>
@@ -163,43 +162,43 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-luxury-900 text-luxury-400 py-12 border-t border-luxury-800">
+      <footer className="bg-luxury-900 text-white/60 py-12 border-t border-white/10">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-golden-400 text-lg mb-4">CONTACT US</h3>
-              <p className="text-sm hover:text-golden-300 transition-colors">Dubai, UAE</p>
-              <p className="text-sm hover:text-golden-300 transition-colors">+971 4 XXX XXXX</p>
-              <p className="text-sm hover:text-golden-300 transition-colors">info@example.com</p>
+              <h3 className="text-white text-lg mb-4">CONTACT US</h3>
+              <p className="text-sm">Dubai, UAE</p>
+              <p className="text-sm">+971 4 XXX XXXX</p>
+              <p className="text-sm">info@example.com</p>
             </div>
             <div>
-              <h3 className="text-golden-400 text-lg mb-4">QUICK LINKS</h3>
+              <h3 className="text-white text-lg mb-4">QUICK LINKS</h3>
               <ul className="space-y-2 text-sm">
-                <li className="hover:text-golden-300 transition-colors cursor-pointer">About Us</li>
-                <li className="hover:text-golden-300 transition-colors cursor-pointer">Properties</li>
-                <li className="hover:text-golden-300 transition-colors cursor-pointer">Contact</li>
-                <li className="hover:text-golden-300 transition-colors cursor-pointer">Blog</li>
+                <li>About Us</li>
+                <li>Properties</li>
+                <li>Contact</li>
+                <li>Blog</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-golden-400 text-lg mb-4">FOLLOW US</h3>
+              <h3 className="text-white text-lg mb-4">FOLLOW US</h3>
               <ul className="space-y-2 text-sm">
-                <li className="hover:text-golden-300 transition-colors cursor-pointer">Instagram</li>
-                <li className="hover:text-golden-300 transition-colors cursor-pointer">Facebook</li>
-                <li className="hover:text-golden-300 transition-colors cursor-pointer">Twitter</li>
-                <li className="hover:text-golden-300 transition-colors cursor-pointer">LinkedIn</li>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>LinkedIn</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-golden-400 text-lg mb-4">LEGAL</h3>
+              <h3 className="text-white text-lg mb-4">LEGAL</h3>
               <ul className="space-y-2 text-sm">
-                <li className="hover:text-golden-300 transition-colors cursor-pointer">Privacy Policy</li>
-                <li className="hover:text-golden-300 transition-colors cursor-pointer">Terms & Conditions</li>
-                <li className="hover:text-golden-300 transition-colors cursor-pointer">Disclaimer</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+                <li>Disclaimer</li>
               </ul>
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-luxury-800 text-center text-sm text-luxury-500">
+          <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm">
             © 2024 All Rights Reserved
           </div>
         </div>
