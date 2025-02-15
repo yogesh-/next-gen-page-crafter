@@ -78,8 +78,8 @@ const Index = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-4 text-white border-white hover:bg-white hover:text-black" />
-          <CarouselNext className="right-4 text-white border-white hover:bg-white hover:text-black" />
+          <CarouselPrevious className="left-4 md:left-2 border-2 border-white text-black hover:bg-white" />
+          <CarouselNext className="right-4 border-2 border-white text-black hover:bg-white" />
         </Carousel>
       </section>
 
