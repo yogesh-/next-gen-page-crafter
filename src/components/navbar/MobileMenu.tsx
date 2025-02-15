@@ -30,7 +30,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       <div className="flex flex-col h-full">
         <div className="flex justify-between items-center p-4 border-b">
           <img
-            src="/lovable-uploads/f8b33a1c-192c-48a3-a888-b41b6ff5e286.png"
+            src="/lovable-uploads/31bf8d28-4dc5-4907-87bc-7cb790ff2468.png"
             alt="Logo"
             className="h-8 brightness-0"
           />
