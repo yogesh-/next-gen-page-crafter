@@ -1,6 +1,7 @@
 
 import { Home, Building2, Phone, Key, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -8,10 +9,24 @@ interface MobileMenuProps {
 }
 
 export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
+  // Add body scroll lock when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    // Cleanup when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="md:hidden fixed inset-0 bg-white z-50">
+    <div className="md:hidden fixed inset-0 bg-white z-50 overflow-hidden">
       <div className="flex flex-col h-full">
         <div className="flex justify-between items-center p-4 border-b">
           <img
