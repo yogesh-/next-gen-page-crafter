@@ -18,18 +18,18 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-sm border-b shadow-md" : "bg-transparent"
+        isScrolled || isMobileMenuOpen ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-24"> {/* Increased height from h-20 to h-24 */}
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
               src="/lovable-uploads/f8b33a1c-192c-48a3-a888-b41b6ff5e286.png"
               alt="Logo"
-              className={`h-16 md:h-20 transition-opacity duration-300 ${  /* Increased from h-12 to h-16/h-20 */
-                isScrolled ? "brightness-0" : "brightness-100"
+              className={`h-16 md:h-20 transition-opacity duration-300 ${
+                isScrolled || isMobileMenuOpen ? "brightness-0" : "brightness-100"
               }`}
             />
           </Link>
@@ -101,7 +101,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={`transition-colors ${
-                isScrolled ? "text-luxury-600" : "text-white"
+                isScrolled || isMobileMenuOpen ? "text-luxury-600" : "text-white"
               }`}
             >
               <svg
@@ -115,7 +115,7 @@ const Navbar = () => {
             </a>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`${isScrolled ? "text-luxury-900" : "text-white"}`}
+              className={`${isScrolled || isMobileMenuOpen ? "text-luxury-900" : "text-white"}`}
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
