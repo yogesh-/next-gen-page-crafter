@@ -52,7 +52,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             Contact
           </NavLink>
           <a
-            href="https://wa.me/+1234567890"
+            href="https://wa.me/971547789838?text=Hi%2C%20I%27ve%20come%20across%20the%20Infinity%20Realty%20website%20and%20would%20like%20further%20information%20from%20you."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-2 text-luxury-600 hover:text-luxury-900"

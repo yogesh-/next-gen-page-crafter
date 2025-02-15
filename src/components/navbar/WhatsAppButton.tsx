@@ -11,7 +11,7 @@ export const WhatsAppButton = ({ isLight, isMobile, className, ...props }: Whats
   if (isMobile) {
     return (
       <a
-        href="https://wa.me/+1234567890"
+        href="https://wa.me/971547789838?text=Hi%2C%20I%27ve%20come%20across%20the%20Infinity%20Realty%20website%20and%20would%20like%20further%20information%20from%20you."
         target="_blank"
         rel="noopener noreferrer"
         className={cn("transition-colors", isLight ? "text-luxury-600" : "text-white", className)}
@@ -24,11 +24,11 @@ export const WhatsAppButton = ({ isLight, isMobile, className, ...props }: Whats
 
   return (
     <a
-      href="https://wa.me/+1234567890"
+      href="https://wa.me/971547789838?text=Hi%2C%20I%27ve%20come%20across%20the%20Infinity%20Realty%20website%20and%20would%20like%20further%20information%20from%20you."
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "flex items-center gap-2 px-6 py-3 border-2 border-green-400 text-green-400 font-bold rounded-full transition-all text-lg",
+        "flex items-center gap-2 px-2 py-1 border border-green-400 text-green-400 font-bold rounded-full transition-all text-lg",
         isLight ? "text-luxury-600 hover:text-luxury-900" : "hover:bg-white hover:text-black",
         className
       )}
