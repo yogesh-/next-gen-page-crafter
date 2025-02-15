@@ -32,7 +32,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           <img
             src="/lovable-uploads/31bf8d28-4dc5-4907-87bc-7cb790ff2468.png"
             alt="Logo"
-            className="h-8 brightness-0"
+            className="h-4 brightness-0"
           />
           <button onClick={onClose} className="text-luxury-900">
             <X className="h-6 w-6" />
