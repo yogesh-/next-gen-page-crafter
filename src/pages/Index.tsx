@@ -108,13 +108,13 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-3 mb-12"
+            className="flex flex-wrap justify-center gap-2 mb-8"
           >
             {Object.keys(propertyTabs).map((type) => (
               <button
                 key={type}
                 onClick={() => setActiveTab(type)}
-                className={`px-6 py-2 rounded-full text-sm transition-all duration-300 
+                className={`px-3 py-1 rounded-full text-xs md:text-sm transition-all duration-300 
                   ${type === activeTab 
                     ? "bg-luxury-900 text-white" 
                     : "bg-transparent border border-luxury-200 text-luxury-600 hover:bg-luxury-50"}`}
@@ -138,7 +138,7 @@ const Index = () => {
                   <button
                     key={property}
                     onClick={() => setActiveProperty(property)}
-                    className={`px-6 py-3 text-sm transition-all duration-300 rounded-full whitespace-nowrap
+                    className={`px-4 py-2 text-sm transition-all duration-300 rounded-md whitespace-nowrap
                       ${property === activeProperty 
                         ? "bg-luxury-900 text-white" 
                         : "bg-transparent border border-luxury-200 text-luxury-600 hover:bg-luxury-50"}`}
