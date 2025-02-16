@@ -23,6 +23,7 @@ const slides = [
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [activeTab, setActiveTab] = useState("OFF-PLAN");
   const [activeProperty, setActiveProperty] = useState("NAD AL SHEBA GARDENS PHASE 7");
 
   useEffect(() => {
@@ -30,6 +31,12 @@ const Index = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const propertyTabs = {
+    "OFF-PLAN": ["NAD AL SHEBA GARDENS PHASE 7", "GOLF DALE AT EMAAR SOUTH", "GOLF ACRES AT EMAAR SOUTH"],
+    "RESALES & RENTALS": ["DOWNTOWN VIEWS", "MARINA HEIGHTS", "PALM RESIDENCE"],
+    "EXCLUSIVE": ["JUMEIRAH BAY", "ZABEEL PALACE", "EMIRATES HILLS"],
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -85,7 +92,7 @@ const Index = () => {
       </section>
 
       {/* New Properties Section */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-white">
+      <section className="py-20 container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -103,36 +110,16 @@ const Index = () => {
             viewport={{ once: true }}
             className="flex flex-wrap justify-center gap-3 mb-12"
           >
-            {["OFF-PLAN", "RESALES & RENTALS", "EXCLUSIVE"].map((type) => (
+            {Object.keys(propertyTabs).map((type) => (
               <button
                 key={type}
+                onClick={() => setActiveTab(type)}
                 className={`px-6 py-2 rounded-full text-sm transition-all duration-300 
-                  ${type === "OFF-PLAN" 
+                  ${type === activeTab 
                     ? "bg-luxury-900 text-white" 
                     : "bg-transparent border border-luxury-200 text-luxury-600 hover:bg-luxury-50"}`}
               >
                 {type}
-              </button>
-            ))}
-          </motion.div>
-
-          {/* Property Navigation */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-wrap justify-start gap-4 mb-8 overflow-x-auto whitespace-nowrap"
-          >
-            {["NAD AL SHEBA GARDENS PHASE 7", "GOLF DALE AT EMAAR SOUTH", "GOLF ACRES AT EMAAR SOUTH"].map((property) => (
-              <button
-                key={property}
-                onClick={() => setActiveProperty(property)}
-                className={`px-6 py-3 text-sm transition-all duration-300 
-                  ${property === activeProperty 
-                    ? "bg-luxury-900 text-white" 
-                    : "bg-transparent text-luxury-600 hover:bg-luxury-50"}`}
-              >
-                {property}
               </button>
             ))}
           </motion.div>
@@ -142,8 +129,26 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden"
+            className="bg-white rounded-2xl shadow-lg overflow-hidden border border-luxury-200"
           >
+            {/* Property Navigation */}
+            <div className="border-b border-luxury-200 overflow-x-auto">
+              <div className="flex min-w-max p-4 gap-4">
+                {propertyTabs[activeTab].map((property) => (
+                  <button
+                    key={property}
+                    onClick={() => setActiveProperty(property)}
+                    className={`px-6 py-3 text-sm transition-all duration-300 rounded-full whitespace-nowrap
+                      ${property === activeProperty 
+                        ? "bg-luxury-900 text-white" 
+                        : "bg-transparent border border-luxury-200 text-luxury-600 hover:bg-luxury-50"}`}
+                  >
+                    {property}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-8 p-8">
               <div className="relative">
                 <img
