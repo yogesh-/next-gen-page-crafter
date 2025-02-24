@@ -23,7 +23,7 @@ const CommunitiesSection = () => {
                   className="w-full h-48 object-cover transition duration-300 group-hover:scale-110"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                  <p className="text-golden-400 text-sm">Starting from AED 2.5M</p>
+                  <p className="text-white/80 text-sm">Starting from AED 2.5M</p>
                   <h3 className="text-white text-lg">Community {index + 1}</h3>
                 </div>
               </div>

@@ -23,7 +23,7 @@ const StatsSection = () => {
               transition={{ delay: index * 0.1 }}
               className="space-y-2"
             >
-              <p className="text-3xl font-light text-golden-600">{stat.number}</p>
+              <p className="text-3xl font-light text-luxury-800">{stat.number}</p>
               <p className="text-xs text-luxury-500 tracking-wider">{stat.label}</p>
             </motion.div>
           ))}

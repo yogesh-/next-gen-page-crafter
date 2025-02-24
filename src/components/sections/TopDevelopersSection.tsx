@@ -32,8 +32,8 @@ const TopDevelopersSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-1 md:left-4 border-2 border-golden-400 text-golden-400 hover:bg-golden-500 hover:text-luxury-900 hover:border-golden-500" />
-          <CarouselNext className="right-1 md:right-4 border-2 border-golden-400 text-golden-400 hover:bg-golden-500 hover:text-luxury-900 hover:border-golden-500" />
+          <CarouselPrevious className="left-1 md:left-4 border-2 border-black/20 text-black hover:bg-black hover:text-white" />
+          <CarouselNext className="right-1 md:right-4 border-2 border-black/20 text-black hover:bg-black hover:text-white" />
         </Carousel>
       </div>
     </section>
