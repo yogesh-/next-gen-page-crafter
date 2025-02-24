@@ -69,8 +69,8 @@ const HeroSection = ({ scrollY }: HeroSectionProps) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-1 md:left-4 border-2 border-white text-white hover:bg-white hover:text-luxury-900" />
-        <CarouselNext className="right-1 md:right-4 border-2 border-white text-white hover:bg-white hover:text-luxury-900" />
+        <CarouselPrevious className="left-1 md:left-4 border-2 border-white  hover:bg-white hover:text-luxury-900" />
+        <CarouselNext className="right-1 md:right-4 border-2 border-white hover:bg-white hover:text-luxury-900" />
       </Carousel>
     </section>
   );
