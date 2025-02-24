@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
@@ -62,7 +63,7 @@ const Index = () => {
                     <h1 className="text-6xl md:text-8xl font-normal text-white tracking-wider leading-tight">
                       {slide.title}
                     </h1>
-                    <div className="w-24 h-[1px] bg-white/40 mx-auto"></div>
+                    <div className="w-24 h-[1px] bg-golden-400 mx-auto"></div>
                     <p className="text-white text-xl md:text-2xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
                       {slide.description}
                     </p>
@@ -70,7 +71,7 @@ const Index = () => {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.5 }}
-                      className="mt-4 px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 text-lg tracking-wide"
+                      className="mt-4 px-8 py-3 border border-golden-400 text-white hover:bg-golden-500 hover:border-golden-500 hover:text-luxury-900 transition-all duration-300 text-lg tracking-wide"
                     >
                       Discover More
                     </motion.button>
@@ -79,8 +80,8 @@ const Index = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-1 md:left-4 border-2 border-white text-black hover:bg-white" />
-          <CarouselNext className="right-1 md:right-4 border-2 border-white text-black hover:bg-white" />
+          <CarouselPrevious className="left-1 md:left-4 border-2 border-golden-400 text-golden-400 hover:bg-golden-500 hover:text-luxury-900 hover:border-golden-500" />
+          <CarouselNext className="right-1 md:right-4 border-2 border-golden-400 text-golden-400 hover:bg-golden-500 hover:text-luxury-900 hover:border-golden-500" />
         </Carousel>
       </section>
 
@@ -116,8 +117,8 @@ const Index = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-1 md:left-4 border-2 border-white text-black hover:bg-white" />
-            <CarouselNext className="right-1 md:right-4 border-2 border-white text-black hover:bg-white" />
+            <CarouselPrevious className="left-1 md:left-4 border-2 border-golden-400 text-golden-400 hover:bg-golden-500 hover:text-luxury-900 hover:border-golden-500" />
+            <CarouselNext className="right-1 md:right-4 border-2 border-golden-400 text-golden-400 hover:bg-golden-500 hover:text-luxury-900 hover:border-golden-500" />
           </Carousel>
         </div>
       </section>
@@ -143,7 +144,7 @@ const Index = () => {
                     className="w-full h-48 object-cover transition duration-300 group-hover:scale-110"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                    <p className="text-white text-sm">Starting from AED 2.5M</p>
+                    <p className="text-golden-400 text-sm">Starting from AED 2.5M</p>
                     <h3 className="text-white text-lg">Community {index + 1}</h3>
                   </div>
                 </div>
@@ -172,7 +173,7 @@ const Index = () => {
                 transition={{ delay: index * 0.1 }}
                 className="space-y-2"
               >
-                <p className="text-3xl font-light text-luxury-800">{stat.number}</p>
+                <p className="text-3xl font-light text-golden-600">{stat.number}</p>
                 <p className="text-xs text-luxury-500 tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
@@ -189,9 +190,9 @@ const Index = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-sm focus:outline-none focus:border-white/40 transition"
+                className="flex-1 px-4 py-2 bg-white/10 border border-golden-400/20 rounded-sm focus:outline-none focus:border-golden-400/40 transition"
               />
-              <button className="px-6 py-2 bg-white text-luxury-900 rounded-sm hover:bg-white/90 transition">
+              <button className="px-6 py-2 bg-golden-500 text-luxury-900 rounded-sm hover:bg-golden-600 transition font-medium">
                 Join
               </button>
             </form>
@@ -200,7 +201,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-luxury-900 text-white/60 py-12 border-t border-white/10">
+      <footer className="bg-luxury-900 text-white/60 py-12 border-t border-golden-400/10">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
@@ -211,32 +212,32 @@ const Index = () => {
             </div>
             <div>
               <h3 className="text-white text-lg mb-4">QUICK LINKS</h3>
-              <ul className="space-y-2 text-sm">
-                <li>About Us</li>
-                <li>Properties</li>
-                <li>Contact</li>
-                <li>Blog</li>
+              <ul className="space-y-2 text-sm hover:[&>li]:text-golden-400">
+                <li className="transition-colors">About Us</li>
+                <li className="transition-colors">Properties</li>
+                <li className="transition-colors">Contact</li>
+                <li className="transition-colors">Blog</li>
               </ul>
             </div>
             <div>
               <h3 className="text-white text-lg mb-4">FOLLOW US</h3>
-              <ul className="space-y-2 text-sm">
-                <li>Instagram</li>
-                <li>Facebook</li>
-                <li>Twitter</li>
-                <li>LinkedIn</li>
+              <ul className="space-y-2 text-sm hover:[&>li]:text-golden-400">
+                <li className="transition-colors">Instagram</li>
+                <li className="transition-colors">Facebook</li>
+                <li className="transition-colors">Twitter</li>
+                <li className="transition-colors">LinkedIn</li>
               </ul>
             </div>
             <div>
               <h3 className="text-white text-lg mb-4">LEGAL</h3>
-              <ul className="space-y-2 text-sm">
-                <li>Privacy Policy</li>
-                <li>Terms & Conditions</li>
-                <li>Disclaimer</li>
+              <ul className="space-y-2 text-sm hover:[&>li]:text-golden-400">
+                <li className="transition-colors">Privacy Policy</li>
+                <li className="transition-colors">Terms & Conditions</li>
+                <li className="transition-colors">Disclaimer</li>
               </ul>
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm">
+          <div className="mt-12 pt-8 border-t border-golden-400/10 text-center text-sm">
             © 2024 All Rights Reserved
           </div>
         </div>
