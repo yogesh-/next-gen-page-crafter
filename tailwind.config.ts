@@ -31,6 +31,11 @@ export default {
           700: "#343a40",
           800: "#212529",
           900: "#121416",
+        },
+        accent: {
+          light: "#33C3F0",
+          DEFAULT: "#1EAEDB",
+          dark: "#0FA0CE",
         }
       },
       keyframes: {
