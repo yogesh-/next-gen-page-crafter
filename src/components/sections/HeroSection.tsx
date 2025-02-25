@@ -52,7 +52,7 @@ const HeroSection = ({ scrollY }: HeroSectionProps) => {
                   <h1 className="text-6xl md:text-8xl font-normal text-white tracking-wider leading-tight">
                     {slide.title}
                   </h1>
-                  <div className="w-24 h-[1px] bg-accent mx-auto"></div>
+                  <div className="w-24 h-[1px] bg-white mx-auto"></div>
                   <p className="text-white text-xl md:text-2xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
                     {slide.description}
                   </p>
@@ -60,7 +60,7 @@ const HeroSection = ({ scrollY }: HeroSectionProps) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
-                    className="mt-4 px-8 py-3 border border-accent text-white hover:bg-accent hover:text-white transition-all duration-300 text-lg tracking-wide"
+                    className="mt-4 px-8 py-3 border border-white text-white hover:bg-white hover:text-luxury-900 transition-all duration-300 text-lg tracking-wide"
                   >
                     Discover More
                   </motion.button>
@@ -69,8 +69,8 @@ const HeroSection = ({ scrollY }: HeroSectionProps) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-1 md:left-4 border-2 border-accent text-accent hover:bg-accent hover:text-white" />
-        <CarouselNext className="right-1 md:right-4 border-2 border-accent text-accent hover:bg-accent hover:text-white" />
+        <CarouselPrevious className="left-1 md:left-4 border-2 border-white text-white hover:bg-white hover:text-luxury-900" />
+        <CarouselNext className="right-1 md:right-4 border-2 border-white text-white hover:bg-white hover:text-luxury-900" />
       </Carousel>
     </section>
   );

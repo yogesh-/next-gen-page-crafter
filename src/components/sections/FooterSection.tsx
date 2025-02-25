@@ -1,7 +1,7 @@
 
 const FooterSection = () => {
   return (
-    <footer className="bg-luxury-900 text-white/60 py-12 border-t border-accent/10">
+    <footer className="bg-luxury-900 text-white/60 py-12 border-t border-white/10">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
@@ -12,7 +12,7 @@ const FooterSection = () => {
           </div>
           <div>
             <h3 className="text-white text-lg mb-4">QUICK LINKS</h3>
-            <ul className="space-y-2 text-sm hover:[&>li]:text-accent">
+            <ul className="space-y-2 text-sm hover:[&>li]:text-white">
               <li className="transition-colors">About Us</li>
               <li className="transition-colors">Properties</li>
               <li className="transition-colors">Contact</li>
@@ -21,7 +21,7 @@ const FooterSection = () => {
           </div>
           <div>
             <h3 className="text-white text-lg mb-4">FOLLOW US</h3>
-            <ul className="space-y-2 text-sm hover:[&>li]:text-accent">
+            <ul className="space-y-2 text-sm hover:[&>li]:text-white">
               <li className="transition-colors">Instagram</li>
               <li className="transition-colors">Facebook</li>
               <li className="transition-colors">Twitter</li>
@@ -30,14 +30,14 @@ const FooterSection = () => {
           </div>
           <div>
             <h3 className="text-white text-lg mb-4">LEGAL</h3>
-            <ul className="space-y-2 text-sm hover:[&>li]:text-accent">
+            <ul className="space-y-2 text-sm hover:[&>li]:text-white">
               <li className="transition-colors">Privacy Policy</li>
               <li className="transition-colors">Terms & Conditions</li>
               <li className="transition-colors">Disclaimer</li>
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-accent/10 text-center text-sm">
+        <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm">
           © 2024 All Rights Reserved
         </div>
       </div>

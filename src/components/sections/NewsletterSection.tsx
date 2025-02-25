@@ -9,9 +9,9 @@ const NewsletterSection = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-2 bg-white/10 border border-accent/20 rounded-sm focus:outline-none focus:border-accent/40 transition"
+              className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-sm focus:outline-none focus:border-white/40 transition"
             />
-            <button className="px-6 py-2 bg-accent text-white rounded-sm hover:bg-accent-dark transition font-medium">
+            <button className="px-6 py-2 bg-white text-luxury-900 rounded-sm hover:bg-white/90 transition font-medium">
               Join
             </button>
           </form>
