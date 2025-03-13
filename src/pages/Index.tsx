@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
@@ -69,7 +70,7 @@ const Index = () => {
                     <h1 className="text-6xl md:text-8xl font-normal text-white tracking-wider leading-tight">
                       {slide.title}
                     </h1>
-                    <div className="w-24 h-[1px] bg-white/40 mx-auto"></div>
+                    <div className="w-24 h-[1px] bg-gold/60 mx-auto"></div>
                     <p className="text-white text-xl md:text-2xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
                       {slide.description}
                     </p>
@@ -77,7 +78,7 @@ const Index = () => {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.5 }}
-                      className="mt-4 px-8 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 text-lg tracking-wide"
+                      className="mt-4 px-8 py-3 border border-gold text-white hover:bg-gold hover:border-gold-dark transition-all duration-300 text-lg tracking-wide"
                     >
                       Discover More
                     </motion.button>
@@ -86,8 +87,8 @@ const Index = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-1 md:left-4 border-2 border-white text-black hover:bg-white" />
-          <CarouselNext className="right-1 md:right-4 border-2 border-white text-black hover:bg-white" />
+          <CarouselPrevious className="left-1 md:left-4 border-2 border-white text-white hover:bg-gold hover:border-gold hover:text-white" />
+          <CarouselNext className="right-1 md:right-4 border-2 border-white text-white hover:bg-gold hover:border-gold hover:text-white" />
         </Carousel>
       </section>
 
@@ -116,8 +117,8 @@ const Index = () => {
                 onClick={() => setActiveTab(type)}
                 className={`px-6 py-2 rounded-full text-sm transition-all duration-300 
                   ${type === activeTab 
-                    ? "bg-luxury-900 text-white" 
-                    : "bg-transparent border border-luxury-200 text-luxury-600 hover:bg-luxury-50"}`}
+                    ? "bg-gold text-white" 
+                    : "bg-transparent border border-luxury-200 text-luxury-600 hover:bg-dubai-sand hover:text-dubai-night hover:border-dubai-sand"}`}
               >
                 {type}
               </button>
@@ -140,8 +141,8 @@ const Index = () => {
                     onClick={() => setActiveProperty(property)}
                     className={`px-6 py-3 text-sm transition-all duration-300 rounded-full whitespace-nowrap
                       ${property === activeProperty 
-                        ? "bg-luxury-900 text-white" 
-                        : "bg-transparent border border-luxury-200 text-luxury-600 hover:bg-luxury-50"}`}
+                        ? "bg-gold text-white" 
+                        : "bg-transparent border border-luxury-200 text-luxury-600 hover:bg-dubai-sand hover:text-dubai-night hover:border-dubai-sand"}`}
                   >
                     {property}
                   </button>
@@ -176,27 +177,27 @@ const Index = () => {
                 <h3 className="text-2xl font-light">Key Highlights</h3>
                 <ul className="space-y-4 text-luxury-600">
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-luxury-900 shrink-0"></span>
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold shrink-0"></span>
                     <span>Exquisite 3-bedroom townhouses and 4 to 7-bedroom villas.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-luxury-900 shrink-0"></span>
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold shrink-0"></span>
                     <span>Swimmable lagoon surrounded by lush greenery.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-luxury-900 shrink-0"></span>
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold shrink-0"></span>
                     <span>Architectural designs with bronze accents and large windows.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-luxury-900 shrink-0"></span>
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold shrink-0"></span>
                     <span>G+1 and G+2 townhouse layouts available.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-luxury-900 shrink-0"></span>
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold shrink-0"></span>
                     <span>Double-height ceilings and open-plan layouts.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-luxury-900 shrink-0"></span>
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold shrink-0"></span>
                     <span>Exclusive community amenities including yoga lawns wave pools.</span>
                   </li>
                 </ul>
@@ -206,10 +207,10 @@ const Index = () => {
                   <p className="text-luxury-600 mb-4">3-7 Bedroom spacious Villa, Townhouse</p>
                   <p className="text-2xl font-light mb-6">AED 6.8 M</p>
                   <div className="flex flex-wrap gap-4">
-                    <button className="px-8 py-3 bg-luxury-900 text-white rounded hover:bg-luxury-800 transition-colors">
+                    <button className="px-8 py-3 bg-gold text-white rounded hover:bg-gold-dark transition-colors">
                       REGISTER NOW
                     </button>
-                    <button className="px-8 py-3 bg-luxury-50 text-luxury-900 rounded hover:bg-luxury-100 transition-colors flex items-center gap-2">
+                    <button className="px-8 py-3 bg-dubai-sand text-dubai-night rounded hover:bg-dubai-sand/80 transition-colors flex items-center gap-2">
                       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
@@ -254,7 +255,7 @@ const Index = () => {
       </section>
 
       {/* Communities Section */}
-      <section className="py-16 bg-luxury-50">
+      <section className="py-16 bg-dubai-sand/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-light text-center mb-12">COMMUNITIES</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -303,7 +304,7 @@ const Index = () => {
                 transition={{ delay: index * 0.1 }}
                 className="space-y-2"
               >
-                <p className="text-3xl font-light text-luxury-800">{stat.number}</p>
+                <p className="text-3xl font-light text-gold">{stat.number}</p>
                 <p className="text-xs text-luxury-500 tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
@@ -312,7 +313,7 @@ const Index = () => {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-luxury-900 text-white">
+      <section className="py-20 bg-dubai-night text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-light mb-8">JOIN OUR NEWSLETTER</h2>
           <div className="max-w-md mx-auto">
@@ -320,9 +321,9 @@ const Index = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-sm focus:outline-none focus:border-white/40 transition"
+                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-sm focus:outline-none focus:border-gold/80 transition"
               />
-              <button className="px-6 py-2 bg-white text-luxury-900 rounded-sm hover:bg-white/90 transition">
+              <button className="px-6 py-2 bg-gold text-dubai-night rounded-sm hover:bg-gold-light transition">
                 Join
               </button>
             </form>
@@ -331,17 +332,17 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-luxury-900 text-white/60 py-12 border-t border-white/10">
+      <footer className="bg-dubai-night text-white/60 py-12 border-t border-gold/20">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-white text-lg mb-4">CONTACT US</h3>
+              <h3 className="text-gold text-lg mb-4">CONTACT US</h3>
               <p className="text-sm">Dubai, UAE</p>
               <p className="text-sm">+971 4 XXX XXXX</p>
               <p className="text-sm">info@example.com</p>
             </div>
             <div>
-              <h3 className="text-white text-lg mb-4">QUICK LINKS</h3>
+              <h3 className="text-gold text-lg mb-4">QUICK LINKS</h3>
               <ul className="space-y-2 text-sm">
                 <li>About Us</li>
                 <li>Properties</li>
@@ -350,7 +351,7 @@ const Index = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-white text-lg mb-4">FOLLOW US</h3>
+              <h3 className="text-gold text-lg mb-4">FOLLOW US</h3>
               <ul className="space-y-2 text-sm">
                 <li>Instagram</li>
                 <li>Facebook</li>
@@ -359,7 +360,7 @@ const Index = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-white text-lg mb-4">LEGAL</h3>
+              <h3 className="text-gold text-lg mb-4">LEGAL</h3>
               <ul className="space-y-2 text-sm">
                 <li>Privacy Policy</li>
                 <li>Terms & Conditions</li>
@@ -367,7 +368,7 @@ const Index = () => {
               </ul>
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm">
+          <div className="mt-12 pt-8 border-t border-gold/20 text-center text-sm">
             © 2024 All Rights Reserved
           </div>
         </div>
