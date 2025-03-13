@@ -1,7 +1,7 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const slides = [
@@ -43,54 +43,8 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navbar />
       
-      {/* Hero Section with Slideshow */}
-      <section className="relative h-screen overflow-hidden">
-        <Carousel className="w-full h-full" opts={{ loop: true }}>
-          <CarouselContent className="-ml-0">
-            {slides.map((slide, index) => (
-              <CarouselItem key={index} className="pl-0 relative w-full h-screen">
-                <div className="absolute inset-0">
-                  <img
-                    src={slide.image}
-                    alt={slide.title}
-                    className="w-full h-full object-cover object-center"
-                    style={{
-                      transform: `scale(1.1) translateY(${scrollY * 0.2}px)`,
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
-                </div>
-                <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="space-y-6"
-                  >
-                    <h1 className="text-6xl md:text-8xl font-normal text-white tracking-wider leading-tight">
-                      {slide.title}
-                    </h1>
-                    <div className="w-24 h-[1px] bg-gold/60 mx-auto"></div>
-                    <p className="text-white text-xl md:text-2xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
-                      {slide.description}
-                    </p>
-                    <motion.button
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.5 }}
-                      className="mt-4 px-8 py-3 border border-gold text-white hover:bg-gold hover:border-gold-dark transition-all duration-300 text-lg tracking-wide"
-                    >
-                      Discover More
-                    </motion.button>
-                  </motion.div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="left-1 md:left-4 border-2 border-white text-white hover:bg-gold hover:border-gold hover:text-white" />
-          <CarouselNext className="right-1 md:right-4 border-2 border-white text-white hover:bg-gold hover:border-gold hover:text-white" />
-        </Carousel>
-      </section>
+      {/* Hero Section - Using the new Hero component */}
+      <Hero />
 
       {/* New Properties Section */}
       <section className="py-20 container mx-auto px-4">
@@ -378,3 +332,4 @@ const Index = () => {
 };
 
 export default Index;
+
